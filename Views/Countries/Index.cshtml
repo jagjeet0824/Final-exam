@@ -1,0 +1,61 @@
+﻿@model IEnumerable<COMP2084FinalF2017.Models.Country>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sochi 2014 Olympic Medal Tracker</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.country)
+            
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gold)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Silver)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bronze)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalMedals)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Flag)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.country)
+           
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gold)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Silver)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bronze)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalMedals)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Flag)
+        </td>
+        
+    </tr>
+}
+
+</table>
+
